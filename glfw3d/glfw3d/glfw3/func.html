@@ -2,822 +2,801 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<title>Module glfw3d.glfw3.func</title>
-		<link rel="stylesheet" href="../../css/style.min.css"/>
-		<script type="text/javascript" src="../../js/script.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/main.css"/>
+		<script type="text/javascript" src="../../js/main.js">/**/</script>
 	</head>
-	<body onload="setupDdox();">
-		<header>
-		</header>
-		<nav id="main-nav">
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<input id="symbolSearch" type="text" placeholder="Search" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus="autofocus"/>
-					<ul id="symbolSearchResults" style="display: none"></ul>
-					<script type="application/javascript" src="../../symbols.js"></script>
-					<script type="application/javascript">
-var symbolSearchRootDir = "../../";
-document.getElementById('symbolSearchPane').style.display = 'block';
-					</script>
+	<body onload="WhammyDocOnLoad();">
+		<div class="container-fluid">
+			<div class="row">
+				<div id="navigation" class="col-sm-2 col-xs-12">
+					<noscript>
+						<p role="alert" class="alert alert-danger">The search functionality needs JavaScript enabled</p>
+					</noscript>
+					<div id="search" style="display: none;" class="input-group">
+						<input id="symbolSearch" type="text" placeholder="Search for..." onkeypress="symbolSearchKey(event);" class="form-control"/>
+						<span class="input-group-btn">
+							<button id="search-btn" type="button" onclick="symbolSearch();" class="btn btn-primary">Go!</button>
+						</span>
+					</div>
+					<div class="navigation">
+						<div class="list-group">
+						<a href="../../glfw3d/glfw3/func.html" class="list-group-item">glfw3d.glfw3.func</a>
+						<a href="../../glfw3d/glfw3/type.html" class="list-group-item">glfw3d.glfw3.type</a>
+						<a href="../../glfw3d/glfw3.html" class="list-group-item">glfw3d.glfw3</a>
+						<a href="../../glfw3d/Input.html" class="list-group-item">glfw3d.Input</a>
+						<a href="../../glfw3d/Main.html" class="list-group-item">glfw3d.Main</a>
+						<a href="../../glfw3d/Monitor.html" class="list-group-item">glfw3d.Monitor</a>
+						<a href="../../glfw3d/Window.html" class="list-group-item">glfw3d.Window</a>
+						<a href="../../glfw3d.html" class="list-group-item">glfw3d</a>
+						</div>
+					</div>
 				</div>
-						<ul>
-						<li>
-							<a href="../../glfw3d/glfw3/func.html">glfw3d.glfw3.func</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/glfw3/type.html">glfw3d.glfw3.type</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/glfw3.html">glfw3d.glfw3</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/Input.html">glfw3d.Input</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/Main.html">glfw3d.Main</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/Monitor.html">glfw3d.Monitor</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/Window.html">glfw3d.Window</a>
-						</li>
-						<li>
-							<a href="../../glfw3d.html">glfw3d</a>
-						</li>
-						</ul>
-			<p id="main-nav-footer">
- Built with
-				<a href="https://github.com/MartinNowak/scod">scod</a>
-			</p>
-		</nav>
-		<div id="main-contents">
-			<h1>Module glfw3d.glfw3.func</h1>
-			<p>GLFW3 functions.
+				<div id="content" class="col-sm-10 col-xs-12">
+					<div class="page-header">
+						<h1>Module glfw3d.glfw3.func</h1>
+					</div>
+					<p>GLFW3 functions.
 </p>
 
-			<section><section><h2>See Also</h2>
+					<section><section><h2>See Also</h2>
 <p><a href="http://www.glfw.org/docs/latest/modules.html">http://www.glfw.org/docs/latest/modules.html</a>
 </p>
 </section>
 </section>
-			<section>
-				<h2>Functions</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwCreateCursor" class="public" href="../../glfw3d/glfw3/func/glfwCreateCursor.html">
-								<code>glfwCreateCursor</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwCreateStandardCursor" class="public" href="../../glfw3d/glfw3/func/glfwCreateStandardCursor.html">
-								<code>glfwCreateStandardCursor</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwCreateWindow" class="public" href="../../glfw3d/glfw3/func/glfwCreateWindow.html">
-								<code>glfwCreateWindow</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwDefaultWindowHints" class="public" href="../../glfw3d/glfw3/func/glfwDefaultWindowHints.html">
-								<code>glfwDefaultWindowHints</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwDestroyCursor" class="public" href="../../glfw3d/glfw3/func/glfwDestroyCursor.html">
-								<code>glfwDestroyCursor</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwDestroyWindow" class="public" href="../../glfw3d/glfw3/func/glfwDestroyWindow.html">
-								<code>glfwDestroyWindow</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwExtensionSupported" class="public" href="../../glfw3d/glfw3/func/glfwExtensionSupported.html">
-								<code>glfwExtensionSupported</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwFocusWindow" class="public" href="../../glfw3d/glfw3/func/glfwFocusWindow.html">
-								<code>glfwFocusWindow</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetClipboardString" class="public" href="../../glfw3d/glfw3/func/glfwGetClipboardString.html">
-								<code>glfwGetClipboardString</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetCurrentContext" class="public" href="../../glfw3d/glfw3/func/glfwGetCurrentContext.html">
-								<code>glfwGetCurrentContext</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetCursorPos" class="public" href="../../glfw3d/glfw3/func/glfwGetCursorPos.html">
-								<code>glfwGetCursorPos</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetFramebufferSize" class="public" href="../../glfw3d/glfw3/func/glfwGetFramebufferSize.html">
-								<code>glfwGetFramebufferSize</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetGammaRamp" class="public" href="../../glfw3d/glfw3/func/glfwGetGammaRamp.html">
-								<code>glfwGetGammaRamp</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetInputMode" class="public" href="../../glfw3d/glfw3/func/glfwGetInputMode.html">
-								<code>glfwGetInputMode</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetJoystickAxes" class="public" href="../../glfw3d/glfw3/func/glfwGetJoystickAxes.html">
-								<code>glfwGetJoystickAxes</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetJoystickButtons" class="public" href="../../glfw3d/glfw3/func/glfwGetJoystickButtons.html">
-								<code>glfwGetJoystickButtons</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetJoystickName" class="public" href="../../glfw3d/glfw3/func/glfwGetJoystickName.html">
-								<code>glfwGetJoystickName</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetKey" class="public" href="../../glfw3d/glfw3/func/glfwGetKey.html">
-								<code>glfwGetKey</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetKeyName" class="public" href="../../glfw3d/glfw3/func/glfwGetKeyName.html">
-								<code>glfwGetKeyName</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetMonitorName" class="public" href="../../glfw3d/glfw3/func/glfwGetMonitorName.html">
-								<code>glfwGetMonitorName</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetMonitorPhysicalSize" class="public" href="../../glfw3d/glfw3/func/glfwGetMonitorPhysicalSize.html">
-								<code>glfwGetMonitorPhysicalSize</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetMonitorPos" class="public" href="../../glfw3d/glfw3/func/glfwGetMonitorPos.html">
-								<code>glfwGetMonitorPos</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetMonitors" class="public" href="../../glfw3d/glfw3/func/glfwGetMonitors.html">
-								<code>glfwGetMonitors</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetMouseButton" class="public" href="../../glfw3d/glfw3/func/glfwGetMouseButton.html">
-								<code>glfwGetMouseButton</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetPrimaryMonitor" class="public" href="../../glfw3d/glfw3/func/glfwGetPrimaryMonitor.html">
-								<code>glfwGetPrimaryMonitor</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetProcAddress" class="public" href="../../glfw3d/glfw3/func/glfwGetProcAddress.html">
-								<code>glfwGetProcAddress</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetRequiredInstanceExtensions" class="public" href="../../glfw3d/glfw3/func/glfwGetRequiredInstanceExtensions.html">
-								<code>glfwGetRequiredInstanceExtensions</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetTime" class="public" href="../../glfw3d/glfw3/func/glfwGetTime.html">
-								<code>glfwGetTime</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetTimerFrequency" class="public" href="../../glfw3d/glfw3/func/glfwGetTimerFrequency.html">
-								<code>glfwGetTimerFrequency</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetTimerValue" class="public" href="../../glfw3d/glfw3/func/glfwGetTimerValue.html">
-								<code>glfwGetTimerValue</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetVersion" class="public" href="../../glfw3d/glfw3/func/glfwGetVersion.html">
-								<code>glfwGetVersion</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetVersionString" class="public" href="../../glfw3d/glfw3/func/glfwGetVersionString.html">
-								<code>glfwGetVersionString</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetVideoMode" class="public" href="../../glfw3d/glfw3/func/glfwGetVideoMode.html">
-								<code>glfwGetVideoMode</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetVideoModes" class="public" href="../../glfw3d/glfw3/func/glfwGetVideoModes.html">
-								<code>glfwGetVideoModes</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetWindowAttrib" class="public" href="../../glfw3d/glfw3/func/glfwGetWindowAttrib.html">
-								<code>glfwGetWindowAttrib</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetWindowFrameSize" class="public" href="../../glfw3d/glfw3/func/glfwGetWindowFrameSize.html">
-								<code>glfwGetWindowFrameSize</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetWindowMonitor" class="public" href="../../glfw3d/glfw3/func/glfwGetWindowMonitor.html">
-								<code>glfwGetWindowMonitor</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetWindowPos" class="public" href="../../glfw3d/glfw3/func/glfwGetWindowPos.html">
-								<code>glfwGetWindowPos</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetWindowSize" class="public" href="../../glfw3d/glfw3/func/glfwGetWindowSize.html">
-								<code>glfwGetWindowSize</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwGetWindowUserPointer" class="public" href="../../glfw3d/glfw3/func/glfwGetWindowUserPointer.html">
-								<code>glfwGetWindowUserPointer</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwHideWindow" class="public" href="../../glfw3d/glfw3/func/glfwHideWindow.html">
-								<code>glfwHideWindow</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwIconifyWindow" class="public" href="../../glfw3d/glfw3/func/glfwIconifyWindow.html">
-								<code>glfwIconifyWindow</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwInit" class="public" href="../../glfw3d/glfw3/func/glfwInit.html">
-								<code>glfwInit</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwJoystickPresent" class="public" href="../../glfw3d/glfw3/func/glfwJoystickPresent.html">
-								<code>glfwJoystickPresent</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwMakeContextCurrent" class="public" href="../../glfw3d/glfw3/func/glfwMakeContextCurrent.html">
-								<code>glfwMakeContextCurrent</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwMaximizeWindow" class="public" href="../../glfw3d/glfw3/func/glfwMaximizeWindow.html">
-								<code>glfwMaximizeWindow</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwPollEvents" class="public" href="../../glfw3d/glfw3/func/glfwPollEvents.html">
-								<code>glfwPollEvents</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwPostEmptyEvent" class="public" href="../../glfw3d/glfw3/func/glfwPostEmptyEvent.html">
-								<code>glfwPostEmptyEvent</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwRestoreWindow" class="public" href="../../glfw3d/glfw3/func/glfwRestoreWindow.html">
-								<code>glfwRestoreWindow</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetCharCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetCharCallback.html">
-								<code>glfwSetCharCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetCharModsCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetCharModsCallback.html">
-								<code>glfwSetCharModsCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetClipboardString" class="public" href="../../glfw3d/glfw3/func/glfwSetClipboardString.html">
-								<code>glfwSetClipboardString</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetCursor" class="public" href="../../glfw3d/glfw3/func/glfwSetCursor.html">
-								<code>glfwSetCursor</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetCursorEnterCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetCursorEnterCallback.html">
-								<code>glfwSetCursorEnterCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetCursorPos" class="public" href="../../glfw3d/glfw3/func/glfwSetCursorPos.html">
-								<code>glfwSetCursorPos</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetCursorPosCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetCursorPosCallback.html">
-								<code>glfwSetCursorPosCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetDropCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetDropCallback.html">
-								<code>glfwSetDropCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetErrorCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetErrorCallback.html">
-								<code>glfwSetErrorCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetFramebufferSizeCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetFramebufferSizeCallback.html">
-								<code>glfwSetFramebufferSizeCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetGamma" class="public" href="../../glfw3d/glfw3/func/glfwSetGamma.html">
-								<code>glfwSetGamma</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetGammaRamp" class="public" href="../../glfw3d/glfw3/func/glfwSetGammaRamp.html">
-								<code>glfwSetGammaRamp</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetInputMode" class="public" href="../../glfw3d/glfw3/func/glfwSetInputMode.html">
-								<code>glfwSetInputMode</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetJoystickCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetJoystickCallback.html">
-								<code>glfwSetJoystickCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetKeyCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetKeyCallback.html">
-								<code>glfwSetKeyCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetMonitorCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetMonitorCallback.html">
-								<code>glfwSetMonitorCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetMouseButtonCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetMouseButtonCallback.html">
-								<code>glfwSetMouseButtonCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetScrollCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetScrollCallback.html">
-								<code>glfwSetScrollCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetTime" class="public" href="../../glfw3d/glfw3/func/glfwSetTime.html">
-								<code>glfwSetTime</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetWindowAspectRatio" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowAspectRatio.html">
-								<code>glfwSetWindowAspectRatio</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetWindowCloseCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowCloseCallback.html">
-								<code>glfwSetWindowCloseCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetWindowFocusCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowFocusCallback.html">
-								<code>glfwSetWindowFocusCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetWindowIcon" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowIcon.html">
-								<code>glfwSetWindowIcon</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetWindowIconifyCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowIconifyCallback.html">
-								<code>glfwSetWindowIconifyCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetWindowMonitor" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowMonitor.html">
-								<code>glfwSetWindowMonitor</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetWindowPos" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowPos.html">
-								<code>glfwSetWindowPos</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetWindowPosCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowPosCallback.html">
-								<code>glfwSetWindowPosCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetWindowRefreshCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowRefreshCallback.html">
-								<code>glfwSetWindowRefreshCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetWindowShouldClose" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowShouldClose.html">
-								<code>glfwSetWindowShouldClose</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetWindowSize" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowSize.html">
-								<code>glfwSetWindowSize</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetWindowSizeCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowSizeCallback.html">
-								<code>glfwSetWindowSizeCallback</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetWindowSizeLimits" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowSizeLimits.html">
-								<code>glfwSetWindowSizeLimits</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetWindowTitle" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowTitle.html">
-								<code>glfwSetWindowTitle</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSetWindowUserPointer" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowUserPointer.html">
-								<code>glfwSetWindowUserPointer</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwShowWindow" class="public" href="../../glfw3d/glfw3/func/glfwShowWindow.html">
-								<code>glfwShowWindow</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSwapBuffers" class="public" href="../../glfw3d/glfw3/func/glfwSwapBuffers.html">
-								<code>glfwSwapBuffers</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwSwapInterval" class="public" href="../../glfw3d/glfw3/func/glfwSwapInterval.html">
-								<code>glfwSwapInterval</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwTerminate" class="public" href="../../glfw3d/glfw3/func/glfwTerminate.html">
-								<code>glfwTerminate</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwVulkanSupported" class="public" href="../../glfw3d/glfw3/func/glfwVulkanSupported.html">
-								<code>glfwVulkanSupported</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwWaitEvents" class="public" href="../../glfw3d/glfw3/func/glfwWaitEvents.html">
-								<code>glfwWaitEvents</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwWaitEventsTimeout" class="public" href="../../glfw3d/glfw3/func/glfwWaitEventsTimeout.html">
-								<code>glfwWaitEventsTimeout</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwWindowHint" class="public" href="../../glfw3d/glfw3/func/glfwWindowHint.html">
-								<code>glfwWindowHint</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfwWindowShouldClose" class="public" href="../../glfw3d/glfw3/func/glfwWindowShouldClose.html">
-								<code>glfwWindowShouldClose</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-				</table>
-			</section>
-			<footer>
-				<hr/>
-				<div id="license-info">
-
-
-
+					<section>
+						<h2>Functions</h2>
+						<table class="table table-striped">
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwCreateCursor" class="public" href="../../glfw3d/glfw3/func/glfwCreateCursor.html">
+										<code>glfwCreateCursor</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwCreateStandardCursor" class="public" href="../../glfw3d/glfw3/func/glfwCreateStandardCursor.html">
+										<code>glfwCreateStandardCursor</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwCreateWindow" class="public" href="../../glfw3d/glfw3/func/glfwCreateWindow.html">
+										<code>glfwCreateWindow</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwDefaultWindowHints" class="public" href="../../glfw3d/glfw3/func/glfwDefaultWindowHints.html">
+										<code>glfwDefaultWindowHints</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwDestroyCursor" class="public" href="../../glfw3d/glfw3/func/glfwDestroyCursor.html">
+										<code>glfwDestroyCursor</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwDestroyWindow" class="public" href="../../glfw3d/glfw3/func/glfwDestroyWindow.html">
+										<code>glfwDestroyWindow</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwExtensionSupported" class="public" href="../../glfw3d/glfw3/func/glfwExtensionSupported.html">
+										<code>glfwExtensionSupported</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwFocusWindow" class="public" href="../../glfw3d/glfw3/func/glfwFocusWindow.html">
+										<code>glfwFocusWindow</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetClipboardString" class="public" href="../../glfw3d/glfw3/func/glfwGetClipboardString.html">
+										<code>glfwGetClipboardString</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetCurrentContext" class="public" href="../../glfw3d/glfw3/func/glfwGetCurrentContext.html">
+										<code>glfwGetCurrentContext</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetCursorPos" class="public" href="../../glfw3d/glfw3/func/glfwGetCursorPos.html">
+										<code>glfwGetCursorPos</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetFramebufferSize" class="public" href="../../glfw3d/glfw3/func/glfwGetFramebufferSize.html">
+										<code>glfwGetFramebufferSize</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetGammaRamp" class="public" href="../../glfw3d/glfw3/func/glfwGetGammaRamp.html">
+										<code>glfwGetGammaRamp</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetInputMode" class="public" href="../../glfw3d/glfw3/func/glfwGetInputMode.html">
+										<code>glfwGetInputMode</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetJoystickAxes" class="public" href="../../glfw3d/glfw3/func/glfwGetJoystickAxes.html">
+										<code>glfwGetJoystickAxes</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetJoystickButtons" class="public" href="../../glfw3d/glfw3/func/glfwGetJoystickButtons.html">
+										<code>glfwGetJoystickButtons</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetJoystickName" class="public" href="../../glfw3d/glfw3/func/glfwGetJoystickName.html">
+										<code>glfwGetJoystickName</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetKey" class="public" href="../../glfw3d/glfw3/func/glfwGetKey.html">
+										<code>glfwGetKey</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetKeyName" class="public" href="../../glfw3d/glfw3/func/glfwGetKeyName.html">
+										<code>glfwGetKeyName</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetMonitorName" class="public" href="../../glfw3d/glfw3/func/glfwGetMonitorName.html">
+										<code>glfwGetMonitorName</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetMonitorPhysicalSize" class="public" href="../../glfw3d/glfw3/func/glfwGetMonitorPhysicalSize.html">
+										<code>glfwGetMonitorPhysicalSize</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetMonitorPos" class="public" href="../../glfw3d/glfw3/func/glfwGetMonitorPos.html">
+										<code>glfwGetMonitorPos</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetMonitors" class="public" href="../../glfw3d/glfw3/func/glfwGetMonitors.html">
+										<code>glfwGetMonitors</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetMouseButton" class="public" href="../../glfw3d/glfw3/func/glfwGetMouseButton.html">
+										<code>glfwGetMouseButton</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetPrimaryMonitor" class="public" href="../../glfw3d/glfw3/func/glfwGetPrimaryMonitor.html">
+										<code>glfwGetPrimaryMonitor</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetProcAddress" class="public" href="../../glfw3d/glfw3/func/glfwGetProcAddress.html">
+										<code>glfwGetProcAddress</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetRequiredInstanceExtensions" class="public" href="../../glfw3d/glfw3/func/glfwGetRequiredInstanceExtensions.html">
+										<code>glfwGetRequiredInstanceExtensions</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetTime" class="public" href="../../glfw3d/glfw3/func/glfwGetTime.html">
+										<code>glfwGetTime</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetTimerFrequency" class="public" href="../../glfw3d/glfw3/func/glfwGetTimerFrequency.html">
+										<code>glfwGetTimerFrequency</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetTimerValue" class="public" href="../../glfw3d/glfw3/func/glfwGetTimerValue.html">
+										<code>glfwGetTimerValue</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetVersion" class="public" href="../../glfw3d/glfw3/func/glfwGetVersion.html">
+										<code>glfwGetVersion</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetVersionString" class="public" href="../../glfw3d/glfw3/func/glfwGetVersionString.html">
+										<code>glfwGetVersionString</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetVideoMode" class="public" href="../../glfw3d/glfw3/func/glfwGetVideoMode.html">
+										<code>glfwGetVideoMode</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetVideoModes" class="public" href="../../glfw3d/glfw3/func/glfwGetVideoModes.html">
+										<code>glfwGetVideoModes</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetWindowAttrib" class="public" href="../../glfw3d/glfw3/func/glfwGetWindowAttrib.html">
+										<code>glfwGetWindowAttrib</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetWindowFrameSize" class="public" href="../../glfw3d/glfw3/func/glfwGetWindowFrameSize.html">
+										<code>glfwGetWindowFrameSize</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetWindowMonitor" class="public" href="../../glfw3d/glfw3/func/glfwGetWindowMonitor.html">
+										<code>glfwGetWindowMonitor</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetWindowPos" class="public" href="../../glfw3d/glfw3/func/glfwGetWindowPos.html">
+										<code>glfwGetWindowPos</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetWindowSize" class="public" href="../../glfw3d/glfw3/func/glfwGetWindowSize.html">
+										<code>glfwGetWindowSize</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwGetWindowUserPointer" class="public" href="../../glfw3d/glfw3/func/glfwGetWindowUserPointer.html">
+										<code>glfwGetWindowUserPointer</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwHideWindow" class="public" href="../../glfw3d/glfw3/func/glfwHideWindow.html">
+										<code>glfwHideWindow</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwIconifyWindow" class="public" href="../../glfw3d/glfw3/func/glfwIconifyWindow.html">
+										<code>glfwIconifyWindow</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwInit" class="public" href="../../glfw3d/glfw3/func/glfwInit.html">
+										<code>glfwInit</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwJoystickPresent" class="public" href="../../glfw3d/glfw3/func/glfwJoystickPresent.html">
+										<code>glfwJoystickPresent</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwMakeContextCurrent" class="public" href="../../glfw3d/glfw3/func/glfwMakeContextCurrent.html">
+										<code>glfwMakeContextCurrent</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwMaximizeWindow" class="public" href="../../glfw3d/glfw3/func/glfwMaximizeWindow.html">
+										<code>glfwMaximizeWindow</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwPollEvents" class="public" href="../../glfw3d/glfw3/func/glfwPollEvents.html">
+										<code>glfwPollEvents</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwPostEmptyEvent" class="public" href="../../glfw3d/glfw3/func/glfwPostEmptyEvent.html">
+										<code>glfwPostEmptyEvent</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwRestoreWindow" class="public" href="../../glfw3d/glfw3/func/glfwRestoreWindow.html">
+										<code>glfwRestoreWindow</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetCharCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetCharCallback.html">
+										<code>glfwSetCharCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetCharModsCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetCharModsCallback.html">
+										<code>glfwSetCharModsCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetClipboardString" class="public" href="../../glfw3d/glfw3/func/glfwSetClipboardString.html">
+										<code>glfwSetClipboardString</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetCursor" class="public" href="../../glfw3d/glfw3/func/glfwSetCursor.html">
+										<code>glfwSetCursor</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetCursorEnterCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetCursorEnterCallback.html">
+										<code>glfwSetCursorEnterCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetCursorPos" class="public" href="../../glfw3d/glfw3/func/glfwSetCursorPos.html">
+										<code>glfwSetCursorPos</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetCursorPosCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetCursorPosCallback.html">
+										<code>glfwSetCursorPosCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetDropCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetDropCallback.html">
+										<code>glfwSetDropCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetErrorCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetErrorCallback.html">
+										<code>glfwSetErrorCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetFramebufferSizeCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetFramebufferSizeCallback.html">
+										<code>glfwSetFramebufferSizeCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetGamma" class="public" href="../../glfw3d/glfw3/func/glfwSetGamma.html">
+										<code>glfwSetGamma</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetGammaRamp" class="public" href="../../glfw3d/glfw3/func/glfwSetGammaRamp.html">
+										<code>glfwSetGammaRamp</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetInputMode" class="public" href="../../glfw3d/glfw3/func/glfwSetInputMode.html">
+										<code>glfwSetInputMode</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetJoystickCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetJoystickCallback.html">
+										<code>glfwSetJoystickCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetKeyCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetKeyCallback.html">
+										<code>glfwSetKeyCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetMonitorCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetMonitorCallback.html">
+										<code>glfwSetMonitorCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetMouseButtonCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetMouseButtonCallback.html">
+										<code>glfwSetMouseButtonCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetScrollCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetScrollCallback.html">
+										<code>glfwSetScrollCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetTime" class="public" href="../../glfw3d/glfw3/func/glfwSetTime.html">
+										<code>glfwSetTime</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetWindowAspectRatio" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowAspectRatio.html">
+										<code>glfwSetWindowAspectRatio</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetWindowCloseCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowCloseCallback.html">
+										<code>glfwSetWindowCloseCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetWindowFocusCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowFocusCallback.html">
+										<code>glfwSetWindowFocusCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetWindowIcon" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowIcon.html">
+										<code>glfwSetWindowIcon</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetWindowIconifyCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowIconifyCallback.html">
+										<code>glfwSetWindowIconifyCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetWindowMonitor" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowMonitor.html">
+										<code>glfwSetWindowMonitor</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetWindowPos" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowPos.html">
+										<code>glfwSetWindowPos</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetWindowPosCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowPosCallback.html">
+										<code>glfwSetWindowPosCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetWindowRefreshCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowRefreshCallback.html">
+										<code>glfwSetWindowRefreshCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetWindowShouldClose" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowShouldClose.html">
+										<code>glfwSetWindowShouldClose</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetWindowSize" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowSize.html">
+										<code>glfwSetWindowSize</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetWindowSizeCallback" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowSizeCallback.html">
+										<code>glfwSetWindowSizeCallback</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetWindowSizeLimits" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowSizeLimits.html">
+										<code>glfwSetWindowSizeLimits</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetWindowTitle" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowTitle.html">
+										<code>glfwSetWindowTitle</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSetWindowUserPointer" class="public" href="../../glfw3d/glfw3/func/glfwSetWindowUserPointer.html">
+										<code>glfwSetWindowUserPointer</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwShowWindow" class="public" href="../../glfw3d/glfw3/func/glfwShowWindow.html">
+										<code>glfwShowWindow</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSwapBuffers" class="public" href="../../glfw3d/glfw3/func/glfwSwapBuffers.html">
+										<code>glfwSwapBuffers</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwSwapInterval" class="public" href="../../glfw3d/glfw3/func/glfwSwapInterval.html">
+										<code>glfwSwapInterval</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwTerminate" class="public" href="../../glfw3d/glfw3/func/glfwTerminate.html">
+										<code>glfwTerminate</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwVulkanSupported" class="public" href="../../glfw3d/glfw3/func/glfwVulkanSupported.html">
+										<code>glfwVulkanSupported</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwWaitEvents" class="public" href="../../glfw3d/glfw3/func/glfwWaitEvents.html">
+										<code>glfwWaitEvents</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwWaitEventsTimeout" class="public" href="../../glfw3d/glfw3/func/glfwWaitEventsTimeout.html">
+										<code>glfwWaitEventsTimeout</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwWindowHint" class="public" href="../../glfw3d/glfw3/func/glfwWindowHint.html">
+										<code>glfwWindowHint</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfwWindowShouldClose" class="public" href="../../glfw3d/glfw3/func/glfwWindowShouldClose.html">
+										<code>glfwWindowShouldClose</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
 				</div>
-			</footer>
+				<div id="searchResults" class="col-sm-10 col-xs-12"></div>
+			</div>
 		</div>
+		<script type="application/javascript" src="../../symbols.js"></script>
+		<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+		</script>
 	</body>
 </html>

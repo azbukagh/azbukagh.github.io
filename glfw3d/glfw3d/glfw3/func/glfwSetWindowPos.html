@@ -2,89 +2,63 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<title>Function glfwSetWindowPos</title>
-		<link rel="stylesheet" href="../../../css/style.min.css"/>
-		<script type="text/javascript" src="../../../js/script.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../../css/main.css"/>
+		<script type="text/javascript" src="../../../js/main.js">/**/</script>
 	</head>
-	<body onload="setupDdox();">
-		<header>
-		</header>
-		<nav id="main-nav">
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<input id="symbolSearch" type="text" placeholder="Search" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus="autofocus"/>
-					<ul id="symbolSearchResults" style="display: none"></ul>
-					<script type="application/javascript" src="../../../symbols.js"></script>
-					<script type="application/javascript">
-var symbolSearchRootDir = "../../../";
-document.getElementById('symbolSearchPane').style.display = 'block';
-					</script>
-				</div>
-						<ul>
-						<li>
-							<a href="../../../glfw3d/glfw3/func.html">glfw3d.glfw3.func</a>
-						</li>
-						<li>
-							<a href="../../../glfw3d/glfw3/type.html">glfw3d.glfw3.type</a>
-						</li>
-						<li>
-							<a href="../../../glfw3d/glfw3.html">glfw3d.glfw3</a>
-						</li>
-						<li>
-							<a href="../../../glfw3d/Input.html">glfw3d.Input</a>
-						</li>
-						<li>
-							<a href="../../../glfw3d/Main.html">glfw3d.Main</a>
-						</li>
-						<li>
-							<a href="../../../glfw3d/Monitor.html">glfw3d.Monitor</a>
-						</li>
-						<li>
-							<a href="../../../glfw3d/Window.html">glfw3d.Window</a>
-						</li>
-						<li>
-							<a href="../../../glfw3d.html">glfw3d</a>
-						</li>
-						</ul>
-			<p id="main-nav-footer">
- Built with
-				<a href="https://github.com/MartinNowak/scod">scod</a>
-			</p>
-		</nav>
-		<div id="main-contents">
-			<h1>Function glfwSetWindowPos</h1>
-			<section>
-				<p></p>
-
-					<section>
-						<h3>Prototype</h3>
-						<div class="prototype">
-							<code class="lang-d">
-<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><span class="typ">void</span> <span class="pln">glfwSetWindowPos</span><span class="pun">(</span>
-								<br/>
-&nbsp;&nbsp;<a href="../../../glfw3d/glfw3/type/GLFWwindow.html"><span class="typ">GLFWwindow</span></a><span class="pun">*</span> <span class="pln">window</span><span class="pun">,</span>
-								<br/>
-&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">xpos</span><span class="pun">,</span>
-								<br/>
-&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ypos</span>
-								<br/>
-<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow</span><span class="pun">;</span>
-							</code>
+	<body onload="WhammyDocOnLoad();">
+		<div class="container-fluid">
+			<div class="row">
+				<div id="navigation" class="col-sm-2 col-xs-12">
+					<noscript>
+						<p role="alert" class="alert alert-danger">The search functionality needs JavaScript enabled</p>
+					</noscript>
+					<div id="search" style="display: none;" class="input-group">
+						<input id="symbolSearch" type="text" placeholder="Search for..." onkeypress="symbolSearchKey(event);" class="form-control"/>
+						<span class="input-group-btn">
+							<button id="search-btn" type="button" onclick="symbolSearch();" class="btn btn-primary">Go!</button>
+						</span>
+					</div>
+					<div class="navigation">
+						<div class="list-group">
+						<a href="../../../glfw3d/glfw3/func.html" class="list-group-item">glfw3d.glfw3.func</a>
+						<a href="../../../glfw3d/glfw3/type.html" class="list-group-item">glfw3d.glfw3.type</a>
+						<a href="../../../glfw3d/glfw3.html" class="list-group-item">glfw3d.glfw3</a>
+						<a href="../../../glfw3d/Input.html" class="list-group-item">glfw3d.Input</a>
+						<a href="../../../glfw3d/Main.html" class="list-group-item">glfw3d.Main</a>
+						<a href="../../../glfw3d/Monitor.html" class="list-group-item">glfw3d.Monitor</a>
+						<a href="../../../glfw3d/Window.html" class="list-group-item">glfw3d.Window</a>
+						<a href="../../../glfw3d.html" class="list-group-item">glfw3d</a>
 						</div>
-					</section>
-
-			</section>
-			<footer>
-				<hr/>
-				<div id="license-info">
-
-
-
+					</div>
 				</div>
-			</footer>
+				<div id="content" class="col-sm-10 col-xs-12">
+					<div class="page-header">
+						<h1>Function glfwSetWindowPos</h1>
+					</div>
+					<section>
+						<p></p>
+
+						<section>
+							<h3>Prototype</h3>
+							<div class="prototype">
+								<pre class="lang-d">
+<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><span class="typ">void</span> <span class="pln">glfwSetWindowPos</span><span class="pun">(</span>
+&nbsp;&nbsp;<a href="../../../glfw3d/glfw3/type/GLFWwindow.html"><span class="typ">GLFWwindow</span></a><span class="pun">*</span> <span class="pln">window</span><span class="pun">,</span>
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">xpos</span><span class="pun">,</span>
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ypos</span>
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow</span><span class="pun">;</span></pre>
+							</div>
+						</section>
+
+					</section>
+				</div>
+				<div id="searchResults" class="col-sm-10 col-xs-12"></div>
+			</div>
 		</div>
+		<script type="application/javascript" src="../../../symbols.js"></script>
+		<script type="application/javascript">
+var symbolSearchRootDir = "../../../";
+		</script>
 	</body>
 </html>

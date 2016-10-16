@@ -2,593 +2,572 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<title>Class Window</title>
-		<link rel="stylesheet" href="../../css/style.min.css"/>
-		<script type="text/javascript" src="../../js/script.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/main.css"/>
+		<script type="text/javascript" src="../../js/main.js">/**/</script>
 	</head>
-	<body onload="setupDdox();">
-		<header>
-		</header>
-		<nav id="main-nav">
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<input id="symbolSearch" type="text" placeholder="Search" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus="autofocus"/>
-					<ul id="symbolSearchResults" style="display: none"></ul>
-					<script type="application/javascript" src="../../symbols.js"></script>
-					<script type="application/javascript">
-var symbolSearchRootDir = "../../";
-document.getElementById('symbolSearchPane').style.display = 'block';
-					</script>
+	<body onload="WhammyDocOnLoad();">
+		<div class="container-fluid">
+			<div class="row">
+				<div id="navigation" class="col-sm-2 col-xs-12">
+					<noscript>
+						<p role="alert" class="alert alert-danger">The search functionality needs JavaScript enabled</p>
+					</noscript>
+					<div id="search" style="display: none;" class="input-group">
+						<input id="symbolSearch" type="text" placeholder="Search for..." onkeypress="symbolSearchKey(event);" class="form-control"/>
+						<span class="input-group-btn">
+							<button id="search-btn" type="button" onclick="symbolSearch();" class="btn btn-primary">Go!</button>
+						</span>
+					</div>
+					<div class="navigation">
+						<div class="list-group">
+						<a href="../../glfw3d/glfw3/func.html" class="list-group-item">glfw3d.glfw3.func</a>
+						<a href="../../glfw3d/glfw3/type.html" class="list-group-item">glfw3d.glfw3.type</a>
+						<a href="../../glfw3d/glfw3.html" class="list-group-item">glfw3d.glfw3</a>
+						<a href="../../glfw3d/Input.html" class="list-group-item">glfw3d.Input</a>
+						<a href="../../glfw3d/Main.html" class="list-group-item">glfw3d.Main</a>
+						<a href="../../glfw3d/Monitor.html" class="list-group-item">glfw3d.Monitor</a>
+						<a href="../../glfw3d/Window.html" class="list-group-item">glfw3d.Window</a>
+						<a href="../../glfw3d.html" class="list-group-item">glfw3d</a>
+						</div>
+					</div>
 				</div>
-						<ul>
-						<li>
-							<a href="../../glfw3d/glfw3/func.html">glfw3d.glfw3.func</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/glfw3/type.html">glfw3d.glfw3.type</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/glfw3.html">glfw3d.glfw3</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/Input.html">glfw3d.Input</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/Main.html">glfw3d.Main</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/Monitor.html">glfw3d.Monitor</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/Window.html">glfw3d.Window</a>
-						</li>
-						<li>
-							<a href="../../glfw3d.html">glfw3d</a>
-						</li>
-						</ul>
-			<p id="main-nav-footer">
- Built with
-				<a href="https://github.com/MartinNowak/scod">scod</a>
-			</p>
-		</nav>
-		<div id="main-contents">
-			<h1>Class Window</h1>
-			<section>
-				<p>Wrapper around GLFWwindow struct.
+				<div id="content" class="col-sm-10 col-xs-12">
+					<div class="page-header">
+						<h1>Class Window</h1>
+					</div>
+					<section>
+						<p>Wrapper around GLFWwindow struct.
 </p>
 
-					<section>
-						<h3>Inherits from</h3>
-						<ul>
-							<li>
-								<code class="prettyprint lang-d"><span class="typ">Object</span></code>
+						<section>
+							<h3>Inherits from</h3>
+							<ul>
+								<li>
+									<code class="prettyprint lang-d"><span class="typ">Object</span></code>
  (base class)
-							</li>
-						</ul>
-					</section>
-					<section>
-						<h3>Constructors</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.this.html" class="public">
-										<code>this</code>
-									</a>
-								</td>
-								<td>Creates <a href="../../glfw3d/Window/Window.window.html"><code class="lang-d"><span class="pln"><a href="../../glfw3d/Window/Window.window.html"><span class="pln">window</span></a></span></code></a>
+								</li>
+							</ul>
+						</section>
+						<section>
+							<h3>Constructors</h3>
+							<table class="table table-striped">
+								<col class="caption"/>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.this.html" class="public">
+											<code>this</code>
+										</a>
+									</td>
+									<td>Creates window
 </td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Fields</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Type</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.window.html" class="private"><code>window</code></a>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../glfw3d/glfw3/type/GLFWwindow.html"><span class="typ">GLFWwindow</span></a><span class="pun">*</span></code></td>
-								<td></td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Methods</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.destroy.html" class="public">
-										<code>destroy</code>
-									</a>
-								</td>
-								<td>Destroys <a href="../../glfw3d/Window/Window.window.html"><code class="lang-d"><span class="pln">window</span></code></a>
+								</tr>
+							</table>
+						</section>
+						<section>
+							<h3>Fields</h3>
+							<table class="table table-striped">
+								<col class="caption"/>
+								<tr>
+									<th>Type</th>
+									<th>Name</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td class="typecol"><code class="prettyprint lang-d"><a href="../../glfw3d/glfw3/type/GLFWwindow.html"><span class="typ">GLFWwindow</span></a><span class="pun">*</span></code></td>
+									<td>
+										<a href="../../glfw3d/Window/Window.window.html" class="private"><code>window</code></a>
+									</td>
+									<td></td>
+								</tr>
+							</table>
+						</section>
+						<section>
+							<h3>Methods</h3>
+							<table class="table table-striped">
+								<col class="caption"/>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.destroy.html" class="public">
+											<code>destroy</code>
+										</a>
+									</td>
+									<td>Destroys window
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.focus.html" class="public">
-										<code>focus</code>
-									</a>
-								</td>
-								<td>Gives input <code class="lang-d"><span class="pln"><span class="pln">focus</span></span></code> to <a href="../../glfw3d/Window/Window.window.html"><code class="lang-d"><span class="pln"><a href="../../glfw3d/Window/Window.window.html"><span class="pln">window</span></a></span></code></a>.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.focus.html" class="public">
+											<code>focus</code>
+										</a>
+									</td>
+									<td>Gives input focus to window.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.getAttrib.html" class="public">
-										<code>getAttrib</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.getClipboard.html" class="public">
-										<code>getClipboard</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.getCursorPosition.html" class="public">
-										<code>getCursorPosition</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.getFramebufferSize.html" class="public">
-										<code>getFramebufferSize</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.getFrameSize.html" class="public">
-										<code>getFrameSize</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.getInputMode.html" class="public">
-										<code>getInputMode</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.getKey.html" class="public">
-										<code>getKey</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.getMonitor.html" class="public">
-										<code>getMonitor</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.getMouseButton.html" class="public">
-										<code>getMouseButton</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.getPosition.html" class="public">
-										<code>getPosition</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.getSize.html" class="public">
-										<code>getSize</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.getUserPointer.html" class="public">
-										<code>getUserPointer</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.hide.html" class="public">
-										<code>hide</code>
-									</a>
-								</td>
-								<td>Hides <a href="../../glfw3d/Window/Window.window.html"><code class="lang-d"><span class="pln"><a href="../../glfw3d/Window/Window.window.html"><span class="pln">window</span></a></span></code></a>.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.getAttrib.html" class="public">
+											<code>getAttrib</code>
+										</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.getClipboard.html" class="public">
+											<code>getClipboard</code>
+										</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.getCursorPosition.html" class="public">
+											<code>getCursorPosition</code>
+										</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.getFramebufferSize.html" class="public">
+											<code>getFramebufferSize</code>
+										</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.getFrameSize.html" class="public">
+											<code>getFrameSize</code>
+										</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.getInputMode.html" class="public">
+											<code>getInputMode</code>
+										</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.getKey.html" class="public">
+											<code>getKey</code>
+										</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.getMonitor.html" class="public">
+											<code>getMonitor</code>
+										</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.getMouseButton.html" class="public">
+											<code>getMouseButton</code>
+										</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.getPosition.html" class="public">
+											<code>getPosition</code>
+										</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.getSize.html" class="public">
+											<code>getSize</code>
+										</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.getUserPointer.html" class="public">
+											<code>getUserPointer</code>
+										</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.hide.html" class="public">
+											<code>hide</code>
+										</a>
+									</td>
+									<td>Hides window.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.iconify.html" class="public">
-										<code>iconify</code>
-									</a>
-								</td>
-								<td>Minimizes(Iconifiezes) current <a href="../../glfw3d/Window/Window.window.html"><code class="lang-d"><span class="pln"><a href="../../glfw3d/Window/Window.window.html"><span class="pln">window</span></a></span></code></a>.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.iconify.html" class="public">
+											<code>iconify</code>
+										</a>
+									</td>
+									<td>Minimizes(Iconifiezes) current window.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.makeContextCurrent.html" class="public">
-										<code>makeContextCurrent</code>
-									</a>
-								</td>
-								<td>After creation of context this makes context current.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.makeContextCurrent.html" class="public">
+											<code>makeContextCurrent</code>
+										</a>
+									</td>
+									<td>After creation of context this makes context current.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.maximize.html" class="public">
-										<code>maximize</code>
-									</a>
-								</td>
-								<td>Maximizes <a href="../../glfw3d/Window/Window.window.html"><code class="lang-d"><span class="pln"><a href="../../glfw3d/Window/Window.window.html"><span class="pln">window</span></a></span></code></a>.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.maximize.html" class="public">
+											<code>maximize</code>
+										</a>
+									</td>
+									<td>Maximizes window.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.ptr.html" class="public">
-										<code>ptr</code>
-									</a>
-								</td>
-								<td>It can be used to direct access to glfw3 functions.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.ptr.html" class="public">
+											<code>ptr</code>
+										</a>
+									</td>
+									<td>It can be used to direct access to glfw3 functions.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.restore.html" class="public">
-										<code>restore</code>
-									</a>
-								</td>
-								<td>Restores iconified <a href="../../glfw3d/Window/Window.window.html"><code class="lang-d"><span class="pln">window</span></code></a>.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.restore.html" class="public">
+											<code>restore</code>
+										</a>
+									</td>
+									<td>Restores iconified window.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setAspectRatio.html" class="public">
-										<code>setAspectRatio</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setCharCallback.html" class="public">
-										<code>setCharCallback</code>
-									</a>
-								</td>
-								<td>Callbacks. More information in GLFW3 documentation.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setAspectRatio.html" class="public">
+											<code>setAspectRatio</code>
+										</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setCharCallback.html" class="public">
+											<code>setCharCallback</code>
+										</a>
+									</td>
+									<td>Callbacks. More information in GLFW3 documentation.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setCharModsCallback.html" class="public">
-										<code>setCharModsCallback</code>
-									</a>
-								</td>
-								<td>Callbacks. More information in GLFW3 documentation.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setCharModsCallback.html" class="public">
+											<code>setCharModsCallback</code>
+										</a>
+									</td>
+									<td>Callbacks. More information in GLFW3 documentation.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setClipboard.html" class="public">
-										<code>setClipboard</code>
-									</a>
-								</td>
-								<td>Sets clipboard text.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setClipboard.html" class="public">
+											<code>setClipboard</code>
+										</a>
+									</td>
+									<td>Sets clipboard text.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setCloseCallback.html" class="public">
-										<code>setCloseCallback</code>
-									</a>
-								</td>
-								<td>Callbacks. More information in GLFW3 documentation.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setCloseCallback.html" class="public">
+											<code>setCloseCallback</code>
+										</a>
+									</td>
+									<td>Callbacks. More information in GLFW3 documentation.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setCursor.html" class="public">
-										<code>setCursor</code>
-									</a>
-								</td>
-								<td>Sets cursor.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setCursor.html" class="public">
+											<code>setCursor</code>
+										</a>
+									</td>
+									<td>Sets cursor.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setCursorEnterCallback.html" class="public">
-										<code>setCursorEnterCallback</code>
-									</a>
-								</td>
-								<td>Callbacks. More information in GLFW3 documentation.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setCursorEnterCallback.html" class="public">
+											<code>setCursorEnterCallback</code>
+										</a>
+									</td>
+									<td>Callbacks. More information in GLFW3 documentation.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setCursorPosCallback.html" class="public">
-										<code>setCursorPosCallback</code>
-									</a>
-								</td>
-								<td>Callbacks. More information in GLFW3 documentation.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setCursorPosCallback.html" class="public">
+											<code>setCursorPosCallback</code>
+										</a>
+									</td>
+									<td>Callbacks. More information in GLFW3 documentation.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setCursorPosition.html" class="public">
-										<code>setCursorPosition</code>
-									</a>
-								</td>
-								<td>Sets cursor position.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setCursorPosition.html" class="public">
+											<code>setCursorPosition</code>
+										</a>
+									</td>
+									<td>Sets cursor position.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setDropCallback.html" class="public">
-										<code>setDropCallback</code>
-									</a>
-								</td>
-								<td>Callbacks. More information in GLFW3 documentation.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setDropCallback.html" class="public">
+											<code>setDropCallback</code>
+										</a>
+									</td>
+									<td>Callbacks. More information in GLFW3 documentation.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setFocusCallback.html" class="public">
-										<code>setFocusCallback</code>
-									</a>
-								</td>
-								<td>Callbacks. More information in GLFW3 documentation.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setFocusCallback.html" class="public">
+											<code>setFocusCallback</code>
+										</a>
+									</td>
+									<td>Callbacks. More information in GLFW3 documentation.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setFramebufferSizeCallback.html" class="public">
-										<code>setFramebufferSizeCallback</code>
-									</a>
-								</td>
-								<td>Callbacks. More information in GLFW3 documentation.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setFramebufferSizeCallback.html" class="public">
+											<code>setFramebufferSizeCallback</code>
+										</a>
+									</td>
+									<td>Callbacks. More information in GLFW3 documentation.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setIcon.html" class="public">
-										<code>setIcon</code>
-									</a>
-								</td>
-								<td>Sets <a href="../../glfw3d/Window/Window.window.html"><code class="lang-d"><span class="pln">window</span></code></a> icon
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setIcon.html" class="public">
+											<code>setIcon</code>
+										</a>
+									</td>
+									<td>Sets window icon
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setIconifyCallback.html" class="public">
-										<code>setIconifyCallback</code>
-									</a>
-								</td>
-								<td>Callbacks. More information in GLFW3 documentation.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setIconifyCallback.html" class="public">
+											<code>setIconifyCallback</code>
+										</a>
+									</td>
+									<td>Callbacks. More information in GLFW3 documentation.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setInputMode.html" class="public">
-										<code>setInputMode</code>
-									</a>
-								</td>
-								<td>Sets input <a href="../../glfw3d/Window/Window.setInputMode.html#mode"><code class="lang-d"><span class="pln">mode</span></code></a>.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setInputMode.html" class="public">
+											<code>setInputMode</code>
+										</a>
+									</td>
+									<td>Sets input mode.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setKeyCallback.html" class="public">
-										<code>setKeyCallback</code>
-									</a>
-								</td>
-								<td>Callbacks. More information in GLFW3 documentation.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setKeyCallback.html" class="public">
+											<code>setKeyCallback</code>
+										</a>
+									</td>
+									<td>Callbacks. More information in GLFW3 documentation.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setMonitor.html" class="public">
-										<code>setMonitor</code>
-									</a>
-								</td>
-								<td>Makes <a href="../../glfw3d/Window/Window.window.html"><code class="lang-d"><span class="pln"><a href="../../glfw3d/Window/Window.window.html"><span class="pln">window</span></a></span></code></a> fullscreen on specified monitor.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setMonitor.html" class="public">
+											<code>setMonitor</code>
+										</a>
+									</td>
+									<td>Makes window fullscreen on specified monitor.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setMouseButtonCallback.html" class="public">
-										<code>setMouseButtonCallback</code>
-									</a>
-								</td>
-								<td>Callbacks. More information in GLFW3 documentation.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setMouseButtonCallback.html" class="public">
+											<code>setMouseButtonCallback</code>
+										</a>
+									</td>
+									<td>Callbacks. More information in GLFW3 documentation.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setPosition.html" class="public">
-										<code>setPosition</code>
-									</a>
-								</td>
-								<td>Sets position of <a href="../../glfw3d/Window/Window.window.html"><code class="lang-d"><span class="pln">window</span></code></a>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setPosition.html" class="public">
+											<code>setPosition</code>
+										</a>
+									</td>
+									<td>Sets position of window
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setPositionCallback.html" class="public">
-										<code>setPositionCallback</code>
-									</a>
-								</td>
-								<td>Callbacks. More information in GLFW3 documentation.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setPositionCallback.html" class="public">
+											<code>setPositionCallback</code>
+										</a>
+									</td>
+									<td>Callbacks. More information in GLFW3 documentation.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setRefreshCallback.html" class="public">
-										<code>setRefreshCallback</code>
-									</a>
-								</td>
-								<td>Callbacks. More information in GLFW3 documentation.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setRefreshCallback.html" class="public">
+											<code>setRefreshCallback</code>
+										</a>
+									</td>
+									<td>Callbacks. More information in GLFW3 documentation.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setScrollCallback.html" class="public">
-										<code>setScrollCallback</code>
-									</a>
-								</td>
-								<td>Callbacks. More information in GLFW3 documentation.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setScrollCallback.html" class="public">
+											<code>setScrollCallback</code>
+										</a>
+									</td>
+									<td>Callbacks. More information in GLFW3 documentation.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setShouldClose.html" class="public">
-										<code>setShouldClose</code>
-									</a>
-								</td>
-								<td>Sets <a href="../../glfw3d/Window/Window.shouldClose.html"><code class="lang-d"><span class="pln">shouldClose</span></code></a>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setShouldClose.html" class="public">
+											<code>setShouldClose</code>
+										</a>
+									</td>
+									<td>Sets shouldClose
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setSize.html" class="public">
-										<code>setSize</code>
-									</a>
-								</td>
-								<td>Sets size of <a href="../../glfw3d/Window/Window.window.html"><code class="lang-d"><span class="pln"><a href="../../glfw3d/Window/Window.window.html"><span class="pln">window</span></a></span></code></a>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setSize.html" class="public">
+											<code>setSize</code>
+										</a>
+									</td>
+									<td>Sets size of window
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setSizeCallback.html" class="public">
-										<code>setSizeCallback</code>
-									</a>
-								</td>
-								<td>Callbacks. More information in GLFW3 documentation.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setSizeCallback.html" class="public">
+											<code>setSizeCallback</code>
+										</a>
+									</td>
+									<td>Callbacks. More information in GLFW3 documentation.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setSizeLimits.html" class="public">
-										<code>setSizeLimits</code>
-									</a>
-								</td>
-								<td>Sets size limits of <a href="../../glfw3d/Window/Window.window.html"><code class="lang-d"><span class="pln"><a href="../../glfw3d/Window/Window.window.html"><span class="pln">window</span></a></span></code></a>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setSizeLimits.html" class="public">
+											<code>setSizeLimits</code>
+										</a>
+									</td>
+									<td>Sets size limits of window
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setTitle.html" class="public">
-										<code>setTitle</code>
-									</a>
-								</td>
-								<td>Sets <a href="../../glfw3d/Window/Window.window.html"><code class="lang-d"><span class="pln">window</span></code></a> title
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setTitle.html" class="public">
+											<code>setTitle</code>
+										</a>
+									</td>
+									<td>Sets window title
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.setUserPointer.html" class="public">
-										<code>setUserPointer</code>
-									</a>
-								</td>
-								<td>Sets user <a href="../../glfw3d/Window/Window.setUserPointer.html#pointer"><code class="lang-d"><span class="pln">pointer</span></code></a> for the <a href="../../glfw3d/Window/Window.window.html"><code class="lang-d"><span class="pln">window</span></code></a>.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.setUserPointer.html" class="public">
+											<code>setUserPointer</code>
+										</a>
+									</td>
+									<td>Sets user pointer for the window.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.shouldClose.html" class="public">
-										<code>shouldClose</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.show.html" class="public">
-										<code>show</code>
-									</a>
-								</td>
-								<td>Shows <a href="../../glfw3d/Window/Window.window.html"><code class="lang-d"><span class="pln"><a href="../../glfw3d/Window/Window.window.html"><span class="pln">window</span></a></span></code></a>.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.shouldClose.html" class="public">
+											<code>shouldClose</code>
+										</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.show.html" class="public">
+											<code>show</code>
+										</a>
+									</td>
+									<td>Shows window.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.swapBuffers.html" class="public">
-										<code>swapBuffers</code>
-									</a>
-								</td>
-								<td>Swaps front and back buffer.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.swapBuffers.html" class="public">
+											<code>swapBuffers</code>
+										</a>
+									</td>
+									<td>Swaps front and back buffer.
 </td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Aliases</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Window.__xdtor.html" class="public">
-										<code>__xdtor</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-						</table>
-					</section>
+								</tr>
+							</table>
+						</section>
+						<section>
+							<h3>Aliases</h3>
+							<table class="table table-striped">
+								<col class="caption"/>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Window.__xdtor.html" class="public">
+											<code>__xdtor</code>
+										</a>
+									</td>
+									<td></td>
+								</tr>
+							</table>
+						</section>
 
-			</section>
-			<footer>
-				<hr/>
-				<div id="license-info">
-
-
-
+					</section>
 				</div>
-			</footer>
+				<div id="searchResults" class="col-sm-10 col-xs-12"></div>
+			</div>
 		</div>
+		<script type="application/javascript" src="../../symbols.js"></script>
+		<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+		</script>
 	</body>
 </html>

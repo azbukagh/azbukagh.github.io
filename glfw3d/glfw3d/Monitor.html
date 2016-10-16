@@ -2,155 +2,134 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<title>Module glfw3d.Monitor</title>
-		<link rel="stylesheet" href="../css/style.min.css"/>
-		<script type="text/javascript" src="../js/script.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+		<script type="text/javascript" src="../js/main.js">/**/</script>
 	</head>
-	<body onload="setupDdox();">
-		<header>
-		</header>
-		<nav id="main-nav">
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<input id="symbolSearch" type="text" placeholder="Search" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus="autofocus"/>
-					<ul id="symbolSearchResults" style="display: none"></ul>
-					<script type="application/javascript" src="../symbols.js"></script>
-					<script type="application/javascript">
-var symbolSearchRootDir = "../";
-document.getElementById('symbolSearchPane').style.display = 'block';
-					</script>
+	<body onload="WhammyDocOnLoad();">
+		<div class="container-fluid">
+			<div class="row">
+				<div id="navigation" class="col-sm-2 col-xs-12">
+					<noscript>
+						<p role="alert" class="alert alert-danger">The search functionality needs JavaScript enabled</p>
+					</noscript>
+					<div id="search" style="display: none;" class="input-group">
+						<input id="symbolSearch" type="text" placeholder="Search for..." onkeypress="symbolSearchKey(event);" class="form-control"/>
+						<span class="input-group-btn">
+							<button id="search-btn" type="button" onclick="symbolSearch();" class="btn btn-primary">Go!</button>
+						</span>
+					</div>
+					<div class="navigation">
+						<div class="list-group">
+						<a href="../glfw3d/glfw3/func.html" class="list-group-item">glfw3d.glfw3.func</a>
+						<a href="../glfw3d/glfw3/type.html" class="list-group-item">glfw3d.glfw3.type</a>
+						<a href="../glfw3d/glfw3.html" class="list-group-item">glfw3d.glfw3</a>
+						<a href="../glfw3d/Input.html" class="list-group-item">glfw3d.Input</a>
+						<a href="../glfw3d/Main.html" class="list-group-item">glfw3d.Main</a>
+						<a href="../glfw3d/Monitor.html" class="list-group-item">glfw3d.Monitor</a>
+						<a href="../glfw3d/Window.html" class="list-group-item">glfw3d.Window</a>
+						<a href="../glfw3d.html" class="list-group-item">glfw3d</a>
+						</div>
+					</div>
 				</div>
-						<ul>
-						<li>
-							<a href="../glfw3d/glfw3/func.html">glfw3d.glfw3.func</a>
-						</li>
-						<li>
-							<a href="../glfw3d/glfw3/type.html">glfw3d.glfw3.type</a>
-						</li>
-						<li>
-							<a href="../glfw3d/glfw3.html">glfw3d.glfw3</a>
-						</li>
-						<li>
-							<a href="../glfw3d/Input.html">glfw3d.Input</a>
-						</li>
-						<li>
-							<a href="../glfw3d/Main.html">glfw3d.Main</a>
-						</li>
-						<li>
-							<a href="../glfw3d/Monitor.html">glfw3d.Monitor</a>
-						</li>
-						<li>
-							<a href="../glfw3d/Window.html">glfw3d.Window</a>
-						</li>
-						<li>
-							<a href="../glfw3d.html">glfw3d</a>
-						</li>
-						</ul>
-			<p id="main-nav-footer">
- Built with
-				<a href="https://github.com/MartinNowak/scod">scod</a>
-			</p>
-		</nav>
-		<div id="main-contents">
-			<h1>Module glfw3d.Monitor</h1>
-			<p>Monitors.
+				<div id="content" class="col-sm-10 col-xs-12">
+					<div class="page-header">
+						<h1>Module glfw3d.Monitor</h1>
+					</div>
+					<p>Monitors.
 </p>
 
-			<section></section>
-			<section>
-				<h2>Functions</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a id="glfw3dGetMonitors" class="public" href="../glfw3d/Monitor/glfw3dGetMonitors.html">
-								<code>glfw3dGetMonitors</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-				</table>
-			</section>
-			<section>
-				<h2>Classes</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a id="Monitor" class="public" href="../glfw3d/Monitor/Monitor.html">
-								<code>Monitor</code>
-							</a>
-						</td>
-						<td>Represents GLFWmonitor struct.
+					<section></section>
+					<section>
+						<h2>Functions</h2>
+						<table class="table table-striped">
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a id="glfw3dGetMonitors" class="public" href="../glfw3d/Monitor/glfw3dGetMonitors.html">
+										<code>glfw3dGetMonitors</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h2>Classes</h2>
+						<table class="table table-striped">
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a id="Monitor" class="public" href="../glfw3d/Monitor/Monitor.html">
+										<code>Monitor</code>
+									</a>
+								</td>
+								<td>Represents GLFWmonitor struct.
 </td>
-					</tr>
-				</table>
-			</section>
-			<section>
-				<h2>Structs</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a id="GammaRamp" class="public" href="../glfw3d/Monitor/GammaRamp.html">
-								<code>GammaRamp</code>
-							</a>
-						</td>
-						<td>Utility structs.
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h2>Structs</h2>
+						<table class="table table-striped">
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a id="GammaRamp" class="public" href="../glfw3d/Monitor/GammaRamp.html">
+										<code>GammaRamp</code>
+									</a>
+								</td>
+								<td>Utility structs.
 </td>
-					</tr>
-					<tr>
-						<td>
-							<a id="MonitorPosition" class="public" href="../glfw3d/Monitor/MonitorPosition.html">
-								<code>MonitorPosition</code>
-							</a>
-						</td>
-						<td>Utility structs.
+							</tr>
+							<tr>
+								<td>
+									<a id="MonitorPosition" class="public" href="../glfw3d/Monitor/MonitorPosition.html">
+										<code>MonitorPosition</code>
+									</a>
+								</td>
+								<td>Utility structs.
 </td>
-					</tr>
-					<tr>
-						<td>
-							<a id="MonitorSize" class="public" href="../glfw3d/Monitor/MonitorSize.html">
-								<code>MonitorSize</code>
-							</a>
-						</td>
-						<td>Utility structs.
+							</tr>
+							<tr>
+								<td>
+									<a id="MonitorSize" class="public" href="../glfw3d/Monitor/MonitorSize.html">
+										<code>MonitorSize</code>
+									</a>
+								</td>
+								<td>Utility structs.
 </td>
-					</tr>
-					<tr>
-						<td>
-							<a id="VideoMode" class="public" href="../glfw3d/Monitor/VideoMode.html">
-								<code>VideoMode</code>
-							</a>
-						</td>
-						<td>Utility structs.
+							</tr>
+							<tr>
+								<td>
+									<a id="VideoMode" class="public" href="../glfw3d/Monitor/VideoMode.html">
+										<code>VideoMode</code>
+									</a>
+								</td>
+								<td>Utility structs.
 </td>
-					</tr>
-				</table>
-			</section>
-			<footer>
-				<hr/>
-				<div id="license-info">
-
-
-
+							</tr>
+						</table>
+					</section>
 				</div>
-			</footer>
+				<div id="searchResults" class="col-sm-10 col-xs-12"></div>
+			</div>
 		</div>
+		<script type="application/javascript" src="../symbols.js"></script>
+		<script type="application/javascript">
+var symbolSearchRootDir = "../";
+		</script>
 	</body>
 </html>

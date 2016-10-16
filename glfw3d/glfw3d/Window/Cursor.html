@@ -2,184 +2,163 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<title>Class Cursor</title>
-		<link rel="stylesheet" href="../../css/style.min.css"/>
-		<script type="text/javascript" src="../../js/script.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/main.css"/>
+		<script type="text/javascript" src="../../js/main.js">/**/</script>
 	</head>
-	<body onload="setupDdox();">
-		<header>
-		</header>
-		<nav id="main-nav">
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<input id="symbolSearch" type="text" placeholder="Search" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus="autofocus"/>
-					<ul id="symbolSearchResults" style="display: none"></ul>
-					<script type="application/javascript" src="../../symbols.js"></script>
-					<script type="application/javascript">
-var symbolSearchRootDir = "../../";
-document.getElementById('symbolSearchPane').style.display = 'block';
-					</script>
+	<body onload="WhammyDocOnLoad();">
+		<div class="container-fluid">
+			<div class="row">
+				<div id="navigation" class="col-sm-2 col-xs-12">
+					<noscript>
+						<p role="alert" class="alert alert-danger">The search functionality needs JavaScript enabled</p>
+					</noscript>
+					<div id="search" style="display: none;" class="input-group">
+						<input id="symbolSearch" type="text" placeholder="Search for..." onkeypress="symbolSearchKey(event);" class="form-control"/>
+						<span class="input-group-btn">
+							<button id="search-btn" type="button" onclick="symbolSearch();" class="btn btn-primary">Go!</button>
+						</span>
+					</div>
+					<div class="navigation">
+						<div class="list-group">
+						<a href="../../glfw3d/glfw3/func.html" class="list-group-item">glfw3d.glfw3.func</a>
+						<a href="../../glfw3d/glfw3/type.html" class="list-group-item">glfw3d.glfw3.type</a>
+						<a href="../../glfw3d/glfw3.html" class="list-group-item">glfw3d.glfw3</a>
+						<a href="../../glfw3d/Input.html" class="list-group-item">glfw3d.Input</a>
+						<a href="../../glfw3d/Main.html" class="list-group-item">glfw3d.Main</a>
+						<a href="../../glfw3d/Monitor.html" class="list-group-item">glfw3d.Monitor</a>
+						<a href="../../glfw3d/Window.html" class="list-group-item">glfw3d.Window</a>
+						<a href="../../glfw3d.html" class="list-group-item">glfw3d</a>
+						</div>
+					</div>
 				</div>
-						<ul>
-						<li>
-							<a href="../../glfw3d/glfw3/func.html">glfw3d.glfw3.func</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/glfw3/type.html">glfw3d.glfw3.type</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/glfw3.html">glfw3d.glfw3</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/Input.html">glfw3d.Input</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/Main.html">glfw3d.Main</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/Monitor.html">glfw3d.Monitor</a>
-						</li>
-						<li>
-							<a href="../../glfw3d/Window.html">glfw3d.Window</a>
-						</li>
-						<li>
-							<a href="../../glfw3d.html">glfw3d</a>
-						</li>
-						</ul>
-			<p id="main-nav-footer">
- Built with
-				<a href="https://github.com/MartinNowak/scod">scod</a>
-			</p>
-		</nav>
-		<div id="main-contents">
-			<h1>Class Cursor</h1>
-			<section>
-				<p>Wrapper around GLFWcursor struct
+				<div id="content" class="col-sm-10 col-xs-12">
+					<div class="page-header">
+						<h1>Class Cursor</h1>
+					</div>
+					<section>
+						<p>Wrapper around GLFWcursor struct
 </p>
 
-					<section>
-						<h3>Inherits from</h3>
-						<ul>
-							<li>
-								<code class="prettyprint lang-d"><span class="typ">Object</span></code>
+						<section>
+							<h3>Inherits from</h3>
+							<ul>
+								<li>
+									<code class="prettyprint lang-d"><span class="typ">Object</span></code>
  (base class)
-							</li>
-						</ul>
-					</section>
-					<section>
-						<h3>Constructors</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Cursor.this.html" class="public">
-										<code>this</code>
-									</a>
-								</td>
-								<td>Creates basic arrow <a href="../../glfw3d/Window/Cursor.cursor.html"><code class="lang-d"><span class="pln">cursor</span></code></a>
+								</li>
+							</ul>
+						</section>
+						<section>
+							<h3>Constructors</h3>
+							<table class="table table-striped">
+								<col class="caption"/>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Cursor.this.html" class="public">
+											<code>this</code>
+										</a>
+									</td>
+									<td>Creates basic arrow cursor
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Cursor.this.html" class="public">
-										<code>this</code>
-									</a>
-								</td>
-								<td>Creates <a href="../../glfw3d/Window/Cursor.cursor.html"><code class="lang-d"><span class="pln">cursor</span></code></a> with standard <a href="../../glfw3d/Window/Cursor.this.html#shape"><code class="lang-d"><span class="pln">shape</span></code></a>.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Cursor.this.html" class="public">
+											<code>this</code>
+										</a>
+									</td>
+									<td>Creates cursor with standard shape.
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Cursor.this.html" class="public">
-										<code>this</code>
-									</a>
-								</td>
-								<td>Creates <a href="../../glfw3d/Window/Cursor.cursor.html"><code class="lang-d"><span class="pln">cursor</span></code></a> with non-standard shape.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Cursor.this.html" class="public">
+											<code>this</code>
+										</a>
+									</td>
+									<td>Creates cursor with non-standard shape.
 </td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Fields</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Type</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Cursor.cursor.html" class="private"><code>cursor</code></a>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../glfw3d/glfw3/type/GLFWcursor.html"><span class="typ">GLFWcursor</span></a><span class="pun">*</span></code></td>
-								<td></td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Methods</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Cursor.destroy.html" class="public">
-										<code>destroy</code>
-									</a>
-								</td>
-								<td>Destroys current <a href="../../glfw3d/Window/Cursor.cursor.html"><code class="lang-d"><span class="pln">cursor</span></code></a>
+								</tr>
+							</table>
+						</section>
+						<section>
+							<h3>Fields</h3>
+							<table class="table table-striped">
+								<col class="caption"/>
+								<tr>
+									<th>Type</th>
+									<th>Name</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td class="typecol"><code class="prettyprint lang-d"><a href="../../glfw3d/glfw3/type/GLFWcursor.html"><span class="typ">GLFWcursor</span></a><span class="pun">*</span></code></td>
+									<td>
+										<a href="../../glfw3d/Window/Cursor.cursor.html" class="private"><code>cursor</code></a>
+									</td>
+									<td></td>
+								</tr>
+							</table>
+						</section>
+						<section>
+							<h3>Methods</h3>
+							<table class="table table-striped">
+								<col class="caption"/>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Cursor.destroy.html" class="public">
+											<code>destroy</code>
+										</a>
+									</td>
+									<td>Destroys current cursor
 </td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Cursor.ptr.html" class="public">
-										<code>ptr</code>
-									</a>
-								</td>
-								<td>It can be used to direct access to glfw3 functions.
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Cursor.ptr.html" class="public">
+											<code>ptr</code>
+										</a>
+									</td>
+									<td>It can be used to direct access to glfw3 functions.
 </td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Aliases</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../glfw3d/Window/Cursor.__xdtor.html" class="public">
-										<code>__xdtor</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-						</table>
-					</section>
+								</tr>
+							</table>
+						</section>
+						<section>
+							<h3>Aliases</h3>
+							<table class="table table-striped">
+								<col class="caption"/>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td>
+										<a href="../../glfw3d/Window/Cursor.__xdtor.html" class="public">
+											<code>__xdtor</code>
+										</a>
+									</td>
+									<td></td>
+								</tr>
+							</table>
+						</section>
 
-			</section>
-			<footer>
-				<hr/>
-				<div id="license-info">
-
-
-
+					</section>
 				</div>
-			</footer>
+				<div id="searchResults" class="col-sm-10 col-xs-12"></div>
+			</div>
 		</div>
+		<script type="application/javascript" src="../../symbols.js"></script>
+		<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+		</script>
 	</body>
 </html>
