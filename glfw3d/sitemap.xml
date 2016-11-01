@@ -367,7 +367,7 @@
 <url><loc>http://127.0.0.1/glfw3d/glfw3/type/GLFW_TRUE.html</loc></url>
 <url><loc>http://127.0.0.1/glfw3d/glfw3/type/GLFW_VERSION_MAJOR.html</loc></url>
 <url><loc>http://127.0.0.1/glfw3d/glfw3/type/GLFW_VERSION_MINOR.html</loc></url>
-<url><loc>http://127.0.0.1/glfw3d/glfw3/type/GLFW_VERSION_RELEASE.html</loc></url>
+<url><loc>http://127.0.0.1/glfw3d/glfw3/type/GLFW_VERSION_REVISION.html</loc></url>
 <url><loc>http://127.0.0.1/glfw3d/glfw3/type/GLFW_VERSION_UNAVAILABLE.html</loc></url>
 <url><loc>http://127.0.0.1/glfw3d/glfw3/type/GLFW_VISIBLE.html</loc></url>
 <url><loc>http://127.0.0.1/glfw3d/glfw3/type/GLFW_VRESIZE_CURSOR.html</loc></url>
@@ -382,11 +382,12 @@
 <url><loc>http://127.0.0.1/glfw3d/Input/Joystick.this.html</loc></url>
 <url><loc>http://127.0.0.1/glfw3d/Input/Joystick.joy.html</loc></url>
 <url><loc>http://127.0.0.1/glfw3d/Main.html</loc></url>
+<url><loc>http://127.0.0.1/glfw3d/Main/glfw3dErrorHappened.html</loc></url>
 <url><loc>http://127.0.0.1/glfw3d/Main/glfw3dException.html</loc></url>
 <url><loc>http://127.0.0.1/glfw3d/Main/glfw3dException.this.html</loc></url>
 <url><loc>http://127.0.0.1/glfw3d/Main/glfw3dInit.html</loc></url>
 <url><loc>http://127.0.0.1/glfw3d/Main/glfw3dInit.html</loc></url>
-<url><loc>http://127.0.0.1/glfw3d/Main/glfw3dLog.html</loc></url>
+<url><loc>http://127.0.0.1/glfw3d/Main/glfw3dLogger.html</loc></url>
 <url><loc>http://127.0.0.1/glfw3d/Main/glfw3dTerminate.html</loc></url>
 <url><loc>http://127.0.0.1/glfw3d/Main/glfw3dVersion.html</loc></url>
 <url><loc>http://127.0.0.1/glfw3d/Main/glfw3dVersionString.html</loc></url>
