@@ -390,7 +390,6 @@ var symbols = [
 {name: 'glfw3d.Main.glfw3dVersion', kind: "functiondeclaration", path: './glfw3d/Main/glfw3dVersion.html', attributes: []},
 {name: 'glfw3d.Main.glfw3dVersionString', kind: "functiondeclaration", path: './glfw3d/Main/glfw3dVersionString.html', attributes: []},
 {name: 'glfw3d.Main._sharedStaticCtor1', kind: "functiondeclaration", path: './glfw3d/Main/_sharedStaticCtor1.html', attributes: ["static"]},
-{name: 'glfw3d.Main.Error', kind: "variabledeclaration", path: './glfw3d/Main/Error.html', attributes: []},
 {name: 'glfw3d.Main.glfw3dErrorCallback', kind: "functiondeclaration", path: './glfw3d/Main/glfw3dErrorCallback.html', attributes: ["extern(C)", "nothrow"]},
 {name: 'glfw3d.Monitor', kind: "module", path: './glfw3d/Monitor.html', attributes: []},
 {name: 'glfw3d.Monitor.GammaRamp', kind: "structdeclaration", path: './glfw3d/Monitor/GammaRamp.html', attributes: []},
