@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct SemVer</title>
+		<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+		<script type="text/javascript" src="../js/main.js">/**/</script>
+	</head>
+	<body onload="WhammyDocOnLoad();">
+		<div class="container-fluid">
+			<div class="row">
+				<div id="navigation" class="col-sm-2 col-xs-12">
+					<noscript>
+						<p role="alert" class="alert alert-danger">The search functionality needs JavaScript enabled</p>
+					</noscript>
+					<div id="search" style="display: none;" class="input-group">
+						<input id="symbolSearch" type="text" placeholder="Search for..." onkeypress="symbolSearchKey(event);" class="form-control"/>
+						<span class="input-group-btn">
+							<button id="search-btn" type="button" onclick="symbolSearch();" class="btn btn-primary">Go!</button>
+						</span>
+					</div>
+					<div class="navigation">
+						<div class="list-group">
+						<a href="../BrightProof.html" class="list-group-item">BrightProof</a>
+						</div>
+					</div>
+				</div>
+				<div id="content" class="col-sm-10 col-xs-12">
+					<div class="page-header">
+						<h1>Struct SemVer</h1>
+					</div>
+					<section>
+						<p>Main struct
+</p>
+
+						<section>
+							<h3>Constructors</h3>
+							<table class="table table-striped">
+								<col class="caption"/>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td>
+										<a href="../BrightProof/SemVer.this.html" class="public">
+											<code>this</code>
+										</a>
+									</td>
+									<td>Constructor
+</td>
+								</tr>
+							</table>
+						</section>
+						<section>
+							<h3>Fields</h3>
+							<table class="table table-striped">
+								<col class="caption"/>
+								<tr>
+									<th>Type</th>
+									<th>Name</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td>
+									<td>
+										<a href="../BrightProof/SemVer.Build.html" class="public"><code>Build</code></a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td>
+									<td>
+										<a href="../BrightProof/SemVer.Major.html" class="public"><code>Major</code></a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td>
+									<td>
+										<a href="../BrightProof/SemVer.Minor.html" class="public"><code>Minor</code></a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td>
+									<td>
+										<a href="../BrightProof/SemVer.Patch.html" class="public"><code>Patch</code></a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td>
+									<td>
+										<a href="../BrightProof/SemVer.PreRelease.html" class="public"><code>PreRelease</code></a>
+									</td>
+									<td></td>
+								</tr>
+							</table>
+						</section>
+						<section>
+							<h3>Methods</h3>
+							<table class="table table-striped">
+								<col class="caption"/>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td>
+										<a href="../BrightProof/SemVer.nextMajor.html" class="public">
+											<code>nextMajor</code>
+										</a>
+									</td>
+									<td>Next Major/Minor/Patch version
+ Increments version in semver way
+</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../BrightProof/SemVer.nextMinor.html" class="public">
+											<code>nextMinor</code>
+										</a>
+									</td>
+									<td>Next Major/Minor/Patch version
+ Increments version in semver way
+</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../BrightProof/SemVer.nextPatch.html" class="public">
+											<code>nextPatch</code>
+										</a>
+									</td>
+									<td>Next Major/Minor/Patch version
+ Increments version in semver way
+</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../BrightProof/SemVer.opEquals.html" class="public">
+											<code>opEquals</code>
+										</a>
+									</td>
+									<td>true, if this == b
+</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="../BrightProof/SemVer.toString.html" class="public">
+											<code>toString</code>
+										</a>
+									</td>
+									<td>Convert SemVer to string
+</td>
+								</tr>
+							</table>
+						</section>
+<section><h3>Examples</h3>
+<pre class="code"><code class="lang-d"><span class="typ">SemVer</span><span class="pun">(</span><span class="str">"1.0.0"</span><span class="pun">);
+</span><span class="typ">SemVer</span><span class="pun">(</span><span class="str">"1.0.0+4444"</span><span class="pun">);
+</span><span class="typ">SemVer</span><span class="pun">(</span><span class="str">"1.0.0-eyyyyup"</span><span class="pun">);
+</span><span class="typ">SemVer</span><span class="pun">(</span><span class="str">"1.0.0-yay+build"</span><span class="pun">);</span></code></pre>
+</section>
+
+					</section>
+					<section>
+						<h2>Authors
+<p>Azbuka
+</p>
+
+						</h2>
+					</section>
+					<section>
+						<h2>License
+<p>MIT, see LICENCE.md
+</p>
+
+						</h2>
+					</section>
+					<section>
+						<h2>Copyright
+<p>Azbuka 2016
+</p>
+
+						</h2>
+					</section>
+				</div>
+				<div id="searchResults" class="col-sm-10 col-xs-12"></div>
+			</div>
+		</div>
+		<script type="application/javascript" src="../symbols.js"></script>
+		<script type="application/javascript">
+var symbolSearchRootDir = "../";
+		</script>
+	</body>
+</html>

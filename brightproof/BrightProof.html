@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module BrightProof</title>
+		<link rel="stylesheet" type="text/css" href="./css/main.css"/>
+		<script type="text/javascript" src="./js/main.js">/**/</script>
+	</head>
+	<body onload="WhammyDocOnLoad();">
+		<div class="container-fluid">
+			<div class="row">
+				<div id="navigation" class="col-sm-2 col-xs-12">
+					<noscript>
+						<p role="alert" class="alert alert-danger">The search functionality needs JavaScript enabled</p>
+					</noscript>
+					<div id="search" style="display: none;" class="input-group">
+						<input id="symbolSearch" type="text" placeholder="Search for..." onkeypress="symbolSearchKey(event);" class="form-control"/>
+						<span class="input-group-btn">
+							<button id="search-btn" type="button" onclick="symbolSearch();" class="btn btn-primary">Go!</button>
+						</span>
+					</div>
+					<div class="navigation">
+						<div class="list-group">
+						<a href="./BrightProof.html" class="list-group-item">BrightProof</a>
+						</div>
+					</div>
+				</div>
+				<div id="content" class="col-sm-10 col-xs-12">
+					<div class="page-header">
+						<h1>Module BrightProof</h1>
+					</div>
+					<p></p>
+
+					<section><section><h2>See Also</h2>
+<p>Semantic Versioning http://semver.org/
+</p>
+</section>
+</section>
+					<section>
+						<h2>Classes</h2>
+						<table class="table table-striped">
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a id="SemVerException" class="public" href="./BrightProof/SemVerException.html">
+										<code>SemVerException</code>
+									</a>
+								</td>
+								<td>Exception for easy error handling
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h2>Structs</h2>
+						<table class="table table-striped">
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a id="SemVer" class="public" href="./BrightProof/SemVer.html">
+										<code>SemVer</code>
+									</a>
+								</td>
+								<td>Main struct
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h2>Authors
+<p>Azbuka
+</p>
+
+						</h2>
+					</section>
+					<section>
+						<h2>License
+<p>MIT, see LICENCE.md
+</p>
+
+						</h2>
+					</section>
+					<section>
+						<h2>Copyright
+<p>Azbuka 2016
+</p>
+
+						</h2>
+					</section>
+				</div>
+				<div id="searchResults" class="col-sm-10 col-xs-12"></div>
+			</div>
+		</div>
+		<script type="application/javascript" src="./symbols.js"></script>
+		<script type="application/javascript">
+var symbolSearchRootDir = "./";
+		</script>
+	</body>
+</html>

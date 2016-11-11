@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>http://127.0.0.1/index.html</loc></url>
+<url><loc>http://127.0.0.1/BrightProof.html</loc></url>
+<url><loc>http://127.0.0.1/BrightProof/SemVer.html</loc></url>
+<url><loc>http://127.0.0.1/BrightProof/SemVer.Build.html</loc></url>
+<url><loc>http://127.0.0.1/BrightProof/SemVer.Major.html</loc></url>
+<url><loc>http://127.0.0.1/BrightProof/SemVer.Minor.html</loc></url>
+<url><loc>http://127.0.0.1/BrightProof/SemVer.nextMajor.html</loc></url>
+<url><loc>http://127.0.0.1/BrightProof/SemVer.nextMinor.html</loc></url>
+<url><loc>http://127.0.0.1/BrightProof/SemVer.nextPatch.html</loc></url>
+<url><loc>http://127.0.0.1/BrightProof/SemVer.opEquals.html</loc></url>
+<url><loc>http://127.0.0.1/BrightProof/SemVer.Patch.html</loc></url>
+<url><loc>http://127.0.0.1/BrightProof/SemVer.PreRelease.html</loc></url>
+<url><loc>http://127.0.0.1/BrightProof/SemVer.this.html</loc></url>
+<url><loc>http://127.0.0.1/BrightProof/SemVer.toString.html</loc></url>
+<url><loc>http://127.0.0.1/BrightProof/SemVerException.html</loc></url>
+<url><loc>http://127.0.0.1/BrightProof/SemVerException.this.html</loc></url>
+</urlset>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function SemVerException.this</title>
+		<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+		<script type="text/javascript" src="../js/main.js">/**/</script>
+	</head>
+	<body onload="WhammyDocOnLoad();">
+		<div class="container-fluid">
+			<div class="row">
+				<div id="navigation" class="col-sm-2 col-xs-12">
+					<noscript>
+						<p role="alert" class="alert alert-danger">The search functionality needs JavaScript enabled</p>
+					</noscript>
+					<div id="search" style="display: none;" class="input-group">
+						<input id="symbolSearch" type="text" placeholder="Search for..." onkeypress="symbolSearchKey(event);" class="form-control"/>
+						<span class="input-group-btn">
+							<button id="search-btn" type="button" onclick="symbolSearch();" class="btn btn-primary">Go!</button>
+						</span>
+					</div>
+					<div class="navigation">
+						<div class="list-group">
+						<a href="../BrightProof.html" class="list-group-item">BrightProof</a>
+						</div>
+					</div>
+				</div>
+				<div id="content" class="col-sm-10 col-xs-12">
+					<div class="page-header">
+						<h1>Function SemVerException.this</h1>
+					</div>
+					<section>
+						<p></p>
+
+						<section>
+							<h3>Prototype</h3>
+							<div class="prototype">
+								<pre class="lang-d">
+<span class="pln">this</span><span class="pun">(</span>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">msg</span><span class="pun">,</span>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">file</span> <span class="pun">=</span> <span class="kwd">__FILE__</span><span class="pun">,</span>
+&nbsp;&nbsp;<span class="typ">ulong</span> <span class="pln">line</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">ulong</span><span class="pun">)</span><span class="kwd">__LINE__</span><span class="pun">,</span>
+&nbsp;&nbsp;<span class="pln">object<wbr/></span><span class="pun">.</span><span class="typ">Throwable</span> <span class="pln">next</span> <span class="pun">=</span> <span class="kwd">null</span>
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">pure nothrow @safe</span><span class="pun">;</span></pre>
+							</div>
+						</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="msg">msg</td><td> message</td></tr>
+<tr><td id="file">file</td><td> file, where SemVerException have been throwed</td></tr>
+<tr><td id="line">line</td><td> line number in file</td></tr>
+<tr><td id="next">next</td><td> next exception</td></tr>
+</table>
+</section>
+
+					</section>
+					<section>
+						<h2>Authors
+<p>Azbuka
+</p>
+
+						</h2>
+					</section>
+					<section>
+						<h2>License
+<p>MIT, see LICENCE.md
+</p>
+
+						</h2>
+					</section>
+					<section>
+						<h2>Copyright
+<p>Azbuka 2016
+</p>
+
+						</h2>
+					</section>
+				</div>
+				<div id="searchResults" class="col-sm-10 col-xs-12"></div>
+			</div>
+		</div>
+		<script type="application/javascript" src="../symbols.js"></script>
+		<script type="application/javascript">
+var symbolSearchRootDir = "../";
+		</script>
+	</body>
+</html>
