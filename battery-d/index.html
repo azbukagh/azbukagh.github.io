@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>battery.d v0.0.1</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="title"><h1>battery.d <small>v0.0.1</small></h1></div>
+			<div class="summary">battery-<strong>d</strong> - simple library for reading battery info on linux laptops.
+</div>
+<div class="keyval License"><span class="key keyLicense">License:</span> <div class="val valLicense">MIT
+</div></div>
+<div class="keyval Authors"><span class="key keyAuthors">Authors:</span> <div class="val valAuthors">Azbuka</div></div>
+
+<dl class="members"><dt class="decl"><a href="#BatteryStatus" class="anchor">#</a><DIV><span class="def-anchor" id="BatteryStatus"></span>enum <strong>BatteryStatus</strong>: ubyte;
+<br></DIV>
+<dd class="declDesc"><div class="summary">Current battery status</div>
+
+<dl class="members"><dt class="decl"><a href="#BatteryStatus.DISCHARGING" class="anchor">#</a><DIV><span class="def-anchor" id="BatteryStatus.DISCHARGING"></span><strong>DISCHARGING</strong><br></DIV>
+<dd class="declDesc"><div class="summary">Discharging</div>
+
+</dd>
+</dt><dt class="decl"><a href="#BatteryStatus.CHARGING" class="anchor">#</a><DIV><span class="def-anchor" id="BatteryStatus.CHARGING"></span><strong>CHARGING</strong><br></DIV>
+<dd class="declDesc"><div class="summary">Charging</div>
+
+</dd>
+</dt><dt class="decl"><a href="#BatteryStatus.FULL" class="anchor">#</a><DIV><span class="def-anchor" id="BatteryStatus.FULL"></span><strong>FULL</strong><br></DIV>
+<dd class="declDesc"><div class="summary">Full (100%)</div>
+
+</dd>
+</dt></dl>
+</dd>
+</dt><dt class="decl"><a href="#getBatteryList" class="anchor">#</a><DIV><span class="def-anchor" id="getBatteryList"></span>auto <strong>getBatteryList</strong>();
+<br></DIV>
+<dd class="declDesc"><div class="summary">Gets list of all aviable batteries in system
+</div>
+<div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><div class="d_code"><pre><span class="keyword">import</span> std.array;
+<span class="keyword">import</span> battery.d;
+<span class="psymbol">getBatteryList</span>().array; <span class="comment">// ["BAT0"], laptops in general have only 1 battery
+</span><span class="psymbol">getBatteryList</span>().front; <span class="comment">// "BAT1"
+</span></pre></div>
+</div></div>
+<div class="keyval Rerurns"><span class="key keyRerurns">Returns:</span> <div class="val valRerurns">range of battery names</div></div>
+
+</dd>
+</dt><dt class="decl"><a href="#BatteryException" class="anchor">#</a><DIV><span class="def-anchor" id="BatteryException"></span>class <strong>BatteryException</strong>: <span class="ddoc_psuper_symbol">object.Exception</span>;
+<br></DIV>
+<dd class="declDesc"><div class="summary">Battery exception. Thrown on errors.</div>
+
+</dd>
+</dt><dt class="decl"><a href="#Battery" class="anchor">#</a><DIV><span class="def-anchor" id="Battery"></span>class <strong>Battery</strong>;
+<br></DIV>
+<dd class="declDesc"><div class="summary">Main battery class</div>
+
+<dl class="members"><dt class="decl"><a href="#Battery.this" class="anchor">#</a><DIV><span class="def-anchor" id="Battery.this"></span>this(string <em>battery_name</em>);
+<br></DIV>
+<dd class="declDesc"><div class="summary">Constructor.
+</div>
+<div class="keyval Params"><span class="key keyParams">Parameters:</span> <div class="val valParams"><table class="table-bordered"><tr class="params"><td class="param_id">string <em>battery_name</em></td>
+<td class="param_desc">name of battery (example: BAT0)</td></tr>
+</table></div></div>
+<div class="keyval Throws"><span class="key keyThrows">Throws:</span> <div class="val valThrows">BatteryException if there is no such battery</div></div>
+
+</dd>
+</dt><dt class="decl"><a href="#Battery.this" class="anchor">#</a><DIV><span class="def-anchor" id="Battery.this.2"></span>this();
+<br></DIV>
+<dd class="declDesc"><div class="summary">Cunstructor. Uses first battery, returned by <code class="code">getBatteryList()</code>
+</div>
+<div class="keyval Throws"><span class="key keyThrows">Throws:</span> <div class="val valThrows">battery exception, if no batteries found</div></div>
+
+</dd>
+</dt><dt class="decl"><a href="#Battery.update" class="anchor">#</a><DIV><span class="def-anchor" id="Battery.update"></span>void <strong>update</strong>();
+<br></DIV>
+<dd class="declDesc"><div class="summary">Updates battery info</div>
+
+</dd>
+</dt><dt class="decl"><a href="#Battery.level" class="anchor">#</a><DIV><span class="def-anchor" id="Battery.level"></span>float <strong>level</strong>();
+<br></DIV>
+<dd class="declDesc"><div class="summary">Current battery <strong>level</strong>. 0-100%
+</div>
+<div class="keyval Rerurns"><span class="key keyRerurns">Returns:</span> <div class="val valRerurns">current battery <strong>level</strong> in %</div></div>
+
+</dd>
+</dt><dt class="decl"><a href="#Battery.timeUntilFull" class="anchor">#</a><DIV><span class="def-anchor" id="Battery.timeUntilFull"></span>Duration <strong>timeUntilFull</strong>();
+<br></DIV>
+<dd class="declDesc"><div class="summary">Time until battery is full.
+ <code class="code">Duration.zero</code> if battery full or discharging.
+</div>
+<div class="keyval Rerurns"><span class="key keyRerurns">Returns:</span> <div class="val valRerurns">time until battery is full</div></div>
+
+</dd>
+</dt><dt class="decl"><a href="#Battery.timeRemaining" class="anchor">#</a><DIV><span class="def-anchor" id="Battery.timeRemaining"></span>Duration <strong>timeRemaining</strong>();
+<br></DIV>
+<dd class="declDesc"><div class="summary">Time remaining.
+ <code class="code">Duration.zero</code> if battery full or charging.
+</div>
+<div class="keyval Rerurns"><span class="key keyRerurns">Returns:</span> <div class="val valRerurns">time remaining</div></div>
+
+</dd>
+</dt><dt class="decl"><a href="#Battery.status" class="anchor">#</a><DIV><span class="def-anchor" id="Battery.status"></span>BatteryStatus <strong>status</strong>();
+<br></DIV>
+<dd class="declDesc"><div class="summary">Current battery <strong>status</strong>.
+</div>
+<div class="keyval Rerurns"><span class="key keyRerurns">Returns:</span> <div class="val valRerurns">battery <strong>status</strong></div></div>
+
+</dd>
+</dt><dt class="decl"><a href="#Battery.raw" class="anchor">#</a><DIV><span class="def-anchor" id="Battery.raw"></span>string[string] <strong>raw</strong>();
+<br></DIV>
+<dd class="declDesc"><div class="summary">Raw battery data.
+</div>
+<div class="keyval Rerurns"><span class="key keyRerurns">Returns:</span> <div class="val valRerurns"><strong>raw</strong> battery data</div></div>
+
+</dd>
+</dt><dt class="decl"><a href="#Battery.name" class="anchor">#</a><DIV><span class="def-anchor" id="Battery.name"></span>string <strong>name</strong>();
+<br></DIV>
+<dd class="declDesc"><div class="summary">Battery <strong>name</strong>.
+</div>
+<div class="keyval Rerurns"><span class="key keyRerurns">Returns:</span> <div class="val valRerurns">battery <strong>name</strong></div></div>
+
+</dd>
+</dt></dl>
+</dd>
+</dt></dl>
+
+		</div>
+	</body>
+</html>
